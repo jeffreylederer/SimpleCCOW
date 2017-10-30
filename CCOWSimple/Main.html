@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - My ASP.NET Application</title>
+    <link href="Content/bootstrap.css" rel="stylesheet"/>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/IContextor.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+    CCOW Test program
+</div>
+<div class="container body-content">
+    
+
+    <h2>Main</h2>
+    <br/><br/>
+    Change Context: <select data-bind="options: Patients,
+        optionsText: 'patientname',
+        value: selectedPatient,
+        optionsCaption: 'Choose...',
+        event:{ change: SetContext}">></select> <br/><br />
+    <button type="button" data-bind="click: Resume, text: SuspendedText"></button> 
+    <button type="button" data-bind="click: Leave">Leave Context</button> 
+   
+    <br/><br />
+
+  
+    <table class="table">
+        <tr>
+
+            <th style="text-align: left; width: 200px;">Key</th>
+            <th style="text-align: left; width: 200px">Value</th>
+        </tr>
+
+        <tbody data-bind="foreach: context">
+        <tr>
+            <td>
+                <span data-bind="text: contextname"></span>
+            </td>
+            <td>
+                <span data-bind="text: contextvalue"></span>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table">
+        <tr>
+            <th style="text-align: left; width: 200px;">status</th>
+        </tr>
+
+        <tbody data-bind="foreach: status">
+        <tr>
+            <td>
+                <span data-bind="text: $data"></span>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+    <hr/>
+    <footer>
+        <p>&copy; 2017 - UPMC</p>
+    </footer>
+</div>
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="Scripts/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="Scripts/Pages/Main.js"></script>
+</body>
+</html>
