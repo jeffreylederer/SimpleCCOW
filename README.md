@@ -7,4 +7,4 @@ changes from other applications.
 
 * Leave.html - The page that is displayed when a selecting the Leave context button
 
-This web site sample uses only Javascript to communicate with the VerganceLocator Windows service. It does not depend upon .Net or an activeX orject.
+This web site sample uses only Javascript to communicate with the VerganceLocator Windows service. It does not depend upon .Net or an activeX object.
