@@ -55,7 +55,7 @@ function JoinCallBack(token, statuscode) {
 
 function OnLeaveCallBack(token, statuscode) {
     if (statuscode === Caradigm.IAM.Success) {
-        window.location.href = "Suspend.html";
+        window.location.href = "Leave.html";
     } else {
         cmv.addstatus('Failed to Leave Context : ' + statuscode.message);
     }
